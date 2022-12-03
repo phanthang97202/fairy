@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&family=Red+Hat+Text:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&family=Red+Hat+Text:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&family=Red+Hat+Text:wght@400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap");
+/* Pacifico font  */
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+/* Roboto _Christian Robertson  */
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+/* COMMON CSS  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.container {
+  width: 100%;
+  padding: 0 10%;
+}
+.categories__title {
+  font-family: "Pacifico";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 70px;
+  letter-spacing: 0.0025em;
+  text-transform: capitalize;
+  color: #5a0000;
+}
+/* CSS STORIES  */
+.container.gray {
+  background-color: #f3f0eb;
+}
+.container__stories {
+  padding: 60px 0 83px 0;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.0015em;
+
+  color: #000000;
+}
+.container__stories--description {
+  margin-top: 12px;
+  margin-bottom: 54px;
+}
+.container__stories--item {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.container__stories--item > a::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(245, 172, 71, 0.6);
+  transition: all 0.3s ease-in;
+  display: none;
+}
+
+.container__stories--item > a {
+  border: 4px solid #e7931a;
+  filter: drop-shadow(-2px 1px 24px #ff9933);
+  border-radius: 27px;
+  overflow: hidden;
+}
+.container__stories--item > a:hover {
+  background-color: #e7931a;
+}
+.container__stories--item > a:hover::before {
+  display: block;
+}
+.container__stories--item > a:hover p {
+  display: block;
+  color: #fff;
+}
+.container__stories--item > a > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container__stories--item > a > p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  font-size: 32px;
+  line-height: 1.2;
+}
