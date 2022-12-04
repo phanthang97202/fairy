@@ -88,7 +88,7 @@ body {
   text-align: center; */
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: space-between;
 }
 .container__stories--item > a::before {
@@ -136,6 +136,10 @@ body {
 }
 
 /* CSS PHẦN COLLECTION  */
+.collection {
+  text-align: center;
+  margin-bottom: 20px;
+}
 .container__collection {
   display: flex;
   /* justify-content: space-between; */
@@ -182,6 +186,10 @@ body {
 }
 
 /* CSS WHY CHOOSE US  */
+.why__choose_us {
+  padding: 0 152px;
+  background-color: #f2f2f2;
+}
 .container__why {
   display: flex;
   justify-content: center;
@@ -248,6 +256,7 @@ body {
   background-size: cover; */
   padding: 75px 152px 125px 152px;
   position: relative;
+  margin-bottom: 30px;
 }
 
 .background__feeling {
@@ -320,16 +329,17 @@ body {
 
 /* CSS BLOG  */
 .blog {
-  margin: 0 152px;
+  margin: 40px 152px 0 152px;
 }
 .blog__container {
-  margin-top: 88px;
+  margin-top: 40px;
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 .blog__container--left {
   width: 46%;
+  padding-right: 10px;
 }
 .blog__container--left > img {
   width: 100%;
@@ -402,13 +412,47 @@ body {
   background-color: #ede6e6;
   transition: all 0.5s ease;
 }
+
 /* CSS FOOTER  */
 footer {
+  position: relative;
+  background: url("../image/footer2\ .jpg") no-repeat center;
+  background-size: cover;
+  /* width: 100%; */
+}
+.footer__cover {
+  /* width: 100%;
+  height: 100%; */
+}
+/* 
+.footer__cover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(3, 96, 13, 0.6);
+  z-index: 1;
+} */
+.footer__cover > img {
+  width: 100%;
+  height: 100%;
 }
 .container__footer {
-  background: url("../image/footer.jpg") no-repeat center;
-  background-size: cover;
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%; */
+  /* background: url("../image/footer.jpg") no-repeat center;
+  background-size: cover; */
   padding: 60px 0 63px 0;
+  z-index: 10;
 }
 
 .container__footer-top {
@@ -449,9 +493,25 @@ footer {
   display: flex;
   justify-content: space-between;
   margin: 0 152px;
+  /* width: 100%; */
 }
-
+.footer__contact,
+.footer__product,
+.footer__nav,
+form {
+  /* margin: 0 10px; */
+}
 .footer__contact {
+  width: 30%;
+}
+.footer__product {
+  width: 20%;
+}
+.footer__nav {
+  width: 20%;
+}
+form {
+  flex: 1;
 }
 .footer__contact > h6,
 .footer__product > h6,
@@ -464,6 +524,8 @@ footer {
   letter-spacing: 0.005em;
 
   color: #ffffff;
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
 .footer__contact > p,
 .footer__product > li,
@@ -476,21 +538,68 @@ footer {
   letter-spacing: 0.005em;
 
   color: #ffffff;
+  padding: 6px 0;
+}
+.footer__contact > p {
+  line-height: 1.4;
+  /* margin-right: 10px; */
+}
+.footer__contact > p > i {
+  padding-right: 10px;
 }
 .footer__product > li > a,
 .footer__nav > li > a {
   color: #fff;
 }
+.footer__product > li:hover > a,
+.footer__nav > li:hover > a {
+  color: #edc0c0;
+}
 
-/* lớp phủ  */
-/* .container__stories--item > a::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(245, 172, 71, 0.6);
-  transition: all 0.3s ease-in;
-  display: none;
-} */
+form {
+  background-color: rgba(0, 0, 0, 0.42);
+  padding: 33px 28px 0 28px;
+  /* padding-top: 33px; */
+}
+label {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #ffffff;
+}
+form > div {
+  display: flex;
+  margin-bottom: 18px;
+}
+form > div > label {
+  width: 30%;
+}
+form > div > input,
+form > div > textarea {
+  flex: 1;
+  padding: 16px 20px;
+  background-color: rgba(61, 60, 60, 0.65);
+  border: 1px #5a0000 solid;
+  border-radius: 4px;
+}
+form > div > button {
+  float: right;
+  padding: 10px 20px;
+  background: #e7931a;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.5 ease;
+}
+form > div > button:hover {
+  background-color: #88e834;
+}
+.footer_author {
+  background-color: #000000;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px;
+}

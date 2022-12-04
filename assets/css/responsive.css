@@ -1,15 +1,86 @@
+@media screen and (max-width: 1300px) {
+  /* responsive why choose us  */
+  /* .container__why--items.rounded > img {
+    width: 230px;
+    height: 230px;
+  } */
+}
 @media screen and (max-width: 1200px) {
   /* responsive stories  */
   .container__stories--item {
   }
 
   /* responsive why choose us  */
+  .why__choose_us {
+    padding: 0 60px;
+  }
   .container__why {
     flex-direction: column;
     text-align: center;
   }
   .container__why--item {
     flex-direction: column;
+  }
+
+  /* responsive feeling customers  */
+  .feeling {
+    padding: 75px 90px 125px 90px;
+  }
+  .feeling__container {
+    flex-direction: column;
+  }
+  .feeling__container .feeling__container--item:nth-child(2) {
+    margin: 0 0;
+  }
+
+  /* responsive blog  */
+  .blog__container {
+    flex-direction: column;
+  }
+  .blog__container--left {
+    width: 100%;
+    /* margin-bottom: 70px; */
+  }
+  .blog__container--left {
+    margin-bottom: 20px;
+  }
+  .blog__container--left.center {
+    margin: auto;
+  }
+  .blog__name {
+    margin: 0;
+  }
+  .blog__container--right {
+    width: 100%;
+    margin: auto;
+    /* margin-bottom: 80px; */
+  }
+  .blog__container--right-item {
+    /* height: 250px; */
+  }
+
+  /* responsive footer  */
+  .container__footer-bottom {
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+  }
+
+  .container__footer-bottom {
+    margin: 0 90px;
+  }
+  .footer__contact {
+    width: 50%;
+  }
+  .footer__product,
+  .footer__nav {
+    width: 25%;
+  }
+  form > div > label {
+    width: 20%;
+  }
+  form > div > input,
+  form > div > textarea {
+    flex: 1;
   }
 }
 
@@ -18,7 +89,64 @@
   .container__stories--item {
     flex-direction: column;
   }
+  .container__stories--item > a {
+    margin-bottom: 10px;
+  }
+
+  /* responsive stories  */
+  .container__why--items.rounded {
+    margin: 0;
+  }
+  .container__why--items.rounded > img {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* responsive feeling customers  */
+  .feeling {
+    padding: 75px 30px 125px 30px;
+  }
+
+  /* responsvie blog  */
+  .blog {
+    margin: 0 60px;
+  }
+  /* responsive footer  */
+  .container__footer-bottom {
+    margin: 0 30px;
+  }
+  .container__footer-bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__contact,
+  .footer__product,
+  .footer__nav {
+    margin-bottom: 20px;
+  }
+  .footer__contact,
+  .footer__product,
+  .footer__nav,
+  form {
+    width: 100%;
+  }
 }
 
+@media screen and (max-width: 550px) {
+  /* responsive stories  */
+  .container__why--items.rounded > img {
+    width: 160px;
+    height: 160px;
+  }
+  /* responsvie blog  */
+  .blog {
+    margin: 0 30px;
+  }
+
+  /* responsive footer  */
+  form > div > label {
+    font-size: 16px;
+  }
+}
 @media screen and (max-width: 479px) {
 }
