@@ -5,13 +5,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fairy</title>
+    <title>Fairy - Home</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 
 <body>
+
+    <!-- HEADER NAVIGATION  -->
+    <header>
+        <div class="header__navigation">
+            <div class="fairy__logo">
+                <h1>PAIRY</h1>
+                <p>BAKERY</p>
+            </div>
+            <button id="menu_toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav class=" ">
+                <button id="menu_close">X</button>
+                <div class="nav__featured">
+                    <div class="nav__search">
+                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <a href="">Đăng nhập</a>
+                    <a href="">Đăng ký</a>
+                    <a href=""><i class="fa-solid fa-user"></i></a>
+                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <ul class="nav__link">
+                    <li>
+                        <a href="">
+                            Trang chủ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Câu chuyện
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Sản phẩm
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Blog
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Liên hệ
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+
+        <div class="header__content">
+            <h2>Fairy Bakery</h2>
+            <p>Tinh hoa người thợ làm bánh</p>
+            <button>Xem Ngay</button>
+        </div>
+    </header>
+
     <!-- STORIES WEB -->
     <div class="container gray">
         <div class="container__stories ">
@@ -292,8 +353,8 @@
             </div>
         </div>
     </footer>
-    <!-- <div class="footer_author">Copyrights © 2019 by Fairy Bakery
-    </div> -->
+    <div class="footer_author">Copyrights © 2019 by Fairy Bakery
+    </div>
 </body>
 
 <script>
@@ -339,7 +400,6 @@
             price: 98000,
         },
     ]
-
     const containerCollection = document.querySelector('.container__collection')
     const renderCollectionItem = itemCollection.map((item) => {
         return `
@@ -356,6 +416,16 @@
     })
     containerCollection.innerHTML = renderCollectionItem
 
+    const nav = document.querySelector('nav')
+    const open = document.getElementById('menu_toggle')
+    const close = document.getElementById('menu_close')
+
+    open.addEventListener('click', () => {
+        nav.classList.add('active')
+    })
+    close.addEventListener('click', () => {
+        nav.classList.remove('active')
+    })
 </script>
 
 </html>

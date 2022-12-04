@@ -6,6 +6,42 @@
   } */
 }
 @media screen and (max-width: 1200px) {
+  /* responsive header  */
+  #menu_toggle {
+    display: block;
+  }
+  #menu_close {
+    display: block;
+  }
+  /* header thứ 2 khi responvise  */
+  nav {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(52, 52, 52, 1);
+    z-index: 1000;
+    padding: 10px 40px;
+  }
+  .nav__featured > a {
+    display: none;
+  }
+  .nav__link {
+    display: block;
+  }
+  .nav__link > li {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  .nav__link > li:first-child {
+    margin-bottom: 20px;
+  }
+
+  .nav__link > li:last-child {
+    margin: 0;
+  }
+
   /* responsive stories  */
   .container__stories--item {
   }
@@ -85,6 +121,13 @@
 }
 
 @media screen and (max-width: 767px) {
+  /* responsive header  */
+  .header__content > h2 {
+    font-size: 40px;
+  }
+  .header__content > p {
+    font-size: 20px;
+  }
   /* responsive stories  */
   .container__stories--item {
     flex-direction: column;
