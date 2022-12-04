@@ -12,6 +12,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  list-style-type: none;
 }
 html {
   font-size: 62.5%;
@@ -29,6 +30,7 @@ body {
 .container {
   width: 100%;
   padding: 0 10%;
+  text-align: center;
 }
 .categories__title {
   font-family: "Pacifico";
@@ -39,13 +41,29 @@ body {
   letter-spacing: 0.0025em;
   text-transform: capitalize;
   color: #5a0000;
+  text-align: center;
+}
+/* css add to cart button  */
+.add_to_cart {
+  background: #e7931a;
+  border-radius: 19px;
+  padding: 7px 16.8px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+.add_to_cart > i {
+  padding-right: 6px;
 }
 /* CSS STORIES  */
 .container.gray {
   background-color: #f3f0eb;
+  margin-bottom: 24px;
 }
 .container__stories {
-  padding: 60px 0 83px 0;
+  padding: 60px 0 calc(83px - 18px) 0;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -53,17 +71,25 @@ body {
   line-height: 23px;
   text-align: center;
   letter-spacing: 0.0015em;
-
   color: #000000;
 }
 .container__stories--description {
   margin-top: 12px;
-  margin-bottom: 54px;
+  margin-bottom: calc(54px - 18px);
 }
 .container__stories--item {
-  display: flex;
-  justify-content: space-between;
   position: relative;
+  /* display: flex;
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  text-align: center; */
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .container__stories--item > a::before {
   content: "";
@@ -82,6 +108,7 @@ body {
   filter: drop-shadow(-2px 1px 24px #ff9933);
   border-radius: 27px;
   overflow: hidden;
+  /* margin: 18px auto; */
 }
 .container__stories--item > a:hover {
   background-color: #e7931a;
@@ -107,3 +134,363 @@ body {
   font-size: 32px;
   line-height: 1.2;
 }
+
+/* CSS PHẦN COLLECTION  */
+.container__collection {
+  display: flex;
+  /* justify-content: space-between; */
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.container__collection--item {
+  text-align: center;
+  align-items: center;
+  /* width: 17.2%; */
+  /* margin: 23px 40px 23px 40px; */
+
+  width: 209px;
+
+  /* padding: 23px auto; */
+  /* margin: 23px 23px; */
+  margin: 23px 62px;
+  background: rgba(245, 172, 71, 0.08);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.container__collection--item > img {
+}
+.collection--name {
+  margin-top: 14px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+.collection--price {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.container__collection--item > button {
+  margin: 18px 21px 14px 21px;
+}
+
+/* CSS WHY CHOOSE US  */
+.container__why {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 60px 0;
+}
+.container__why--items {
+  /* width: calc(100% / 3); */
+  align-items: center;
+  margin: auto 0;
+}
+
+.why__item--img > img {
+  width: 120px;
+  height: 100px;
+  margin-right: 17px;
+}
+.title__choose {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.0015em;
+
+  color: #000000;
+  margin-bottom: 13px;
+}
+.desc__choose {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.005em;
+
+  color: #000000;
+}
+
+/* BOX 1 */
+.container__why--item {
+  display: flex;
+  align-items: center;
+  margin: 26px 0;
+}
+.container__why--item > div {
+}
+
+/* BOX GIỮA  */
+.rounded {
+  margin: 0 64px;
+}
+.rounded > img {
+  width: 297px;
+  height: 297px;
+
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* CSS FEELING CUSTOMER  */
+.feeling {
+  /* background: url("../image/cảm\ nhận\ khách\ hàng.jpg") no-repeat center;
+  background-size: cover; */
+  padding: 75px 152px 125px 152px;
+  position: relative;
+}
+
+.background__feeling {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* filter: saturate(10) blur(3px);
+  opacity: 0.8; */
+}
+/* .background__feeling::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(245, 172, 71, 0.6);
+} */
+
+.feeling__container {
+  display: flex;
+}
+.feeling__container .feeling__container--item:nth-child(2) {
+  margin: 0 86px;
+}
+.feeling__container--item > p {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.0015em;
+
+  color: #ffffff;
+  margin: 47px 0 28px 0;
+}
+.feeling__container--item > div {
+  display: flex;
+  align-items: center;
+}
+/* .feeling__container--item > div > img,
+.feeling__container--item > div > p {
+  align-items: center;
+  text-align: center;
+} */
+.feeling__container--item > div > img {
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+}
+.feeling__container--item > div > p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.0015em;
+
+  color: #e7931a;
+}
+.feeling__container--item > p > span {
+  display: inline-block;
+  font-size: 60px;
+}
+
+/* CSS BLOG  */
+.blog {
+  margin: 0 152px;
+}
+.blog__container {
+  margin-top: 88px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.blog__container--left {
+  width: 46%;
+}
+.blog__container--left > img {
+  width: 100%;
+  object-fit: cover;
+}
+.blog__name {
+  margin-top: 24px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+
+  letter-spacing: 0.005em;
+
+  color: rgba(0, 0, 0, 0.87);
+}
+.blog__desc {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.005em;
+
+  color: #000000;
+  margin: 14.5px 0;
+  text-align: justify;
+}
+.blog__more {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+
+  letter-spacing: 0.005em;
+
+  color: #000000;
+}
+.blog__container--right {
+  width: 50%;
+}
+.blog__container--right-item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  margin-bottom: 32px;
+}
+
+.blog__container--right-item > img {
+  width: 26%;
+}
+.blog__container--right-item > div {
+  width: 66%;
+}
+.view_more--blog {
+  padding: 8px 24px;
+
+  border: 1px solid #000000;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #fff;
+}
+.view_more--blog:hover {
+  background-color: #ede6e6;
+  transition: all 0.5s ease;
+}
+/* CSS FOOTER  */
+footer {
+}
+.container__footer {
+  background: url("../image/footer.jpg") no-repeat center;
+  background-size: cover;
+  padding: 60px 0 63px 0;
+}
+
+.container__footer-top {
+  text-align: center;
+}
+.container__footer-top > h1 {
+  font-family: "Pacifico";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 42px;
+  letter-spacing: 0.05em;
+
+  color: #ffffff;
+}
+.container__footer-top > p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 42px;
+  letter-spacing: 0.05em;
+
+  color: #ffffff;
+}
+.container__footer-top > ul {
+  display: inline-flex;
+  font-size: 24px;
+  margin-bottom: 37px;
+}
+.container__footer-top > ul > li {
+  margin: 0 8px;
+}
+.container__footer-top > ul > li > a > i {
+  color: #e7931a;
+}
+
+.container__footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 152px;
+}
+
+.footer__contact {
+}
+.footer__contact > h6,
+.footer__product > h6,
+.footer__nav > h6 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.005em;
+
+  color: #ffffff;
+}
+.footer__contact > p,
+.footer__product > li,
+.footer__nav > li {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.005em;
+
+  color: #ffffff;
+}
+.footer__product > li > a,
+.footer__nav > li > a {
+  color: #fff;
+}
+
+/* lớp phủ  */
+/* .container__stories--item > a::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(245, 172, 71, 0.6);
+  transition: all 0.3s ease-in;
+  display: none;
+} */
